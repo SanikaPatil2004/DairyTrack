@@ -1,0 +1,83 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-)",
+        "Hello, thanks for visiting",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "fat",
+      "patterns": [
+        "How to increase fat in milk?",
+        "What to feed to increase fat?",
+        "What increases fat in milk?"
+      ],
+      "responses": [
+        "Offer high-quality forage like alfalfa hay or silage to provide adequate fiber, which promotes milk fat synthesis in the rumen.",
+        "Minimize heat stress with proper ventilation and cooling systems."
+      ]
+    },
+    {
+      "tag": "Milk",
+      "patterns": [
+        "How to increase milk production ?",
+        "How to increase yielding?",
+        "How to get maximum production?"
+      ],
+      "responses": [
+        "Provide a high-energy diet with proper ratios of carbohydrates, proteins, fats, vitamins, and minerals.",
+        "Use supplements like bypass protein, rumen-protected fat, and minerals to boost milk production."
+      ]
+    },
+    {
+      "tag": "Profit",
+      "patterns": [
+        "Does animal husbandry profitable ?",
+        "Does this business profitable ?"
+      ],
+      "responses": [
+        "Yes , Off-course",
+        "Proper planning make it profitable"
+      ]
+    },
+    {
+      "tag": "health",
+      "patterns": [
+        "How to care animal",
+        "How to keep animal healthy",
+        "Health maintainance"
+      ],
+      "responses": [
+        "Keeping animals healthy requires proper care, nutrition, a clean environment, and regular health monitoring.",
+        "Ensure a constant supply of clean and fresh water to prevent dehydration and improve digestion."
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    }
+    
+  ]
+}
