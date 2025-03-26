@@ -88,6 +88,7 @@ include("index.php");
     <p>&copy; 2024 Milk Dairy Management System. All rights reserved.</p>
 </footer>
 <script src="home.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
 <?php
