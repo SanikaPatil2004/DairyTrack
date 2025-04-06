@@ -6,6 +6,6 @@ session_unset();
 session_destroy();
 
 // Redirect to login or home page
-header("Location: home.php");
+header("Location: ../fronted/home.html");
 exit;
 ?>

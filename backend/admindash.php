@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="/home.css">
     <script defer src="dashboard.js"></script>
     
     <?php
@@ -51,7 +51,7 @@
 }
 
 .nav-items li a:hover {
-    background: linear-gradient(135deg, #17adde, #912ae0);
+    background-color: #0056b3;
 }
 
 /* Add some margin to the main content so it doesn't overlap the fixed navbar */
@@ -61,7 +61,16 @@
     margin-top: 60px; /* Adjust based on navbar height */
 }
 
-
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #1565c0;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+}
 
 /* Main Content */
 .content {
@@ -69,6 +78,7 @@
     padding: 30px;
     background: #e3f2fd;
 }
+
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -81,7 +91,7 @@
         /* Sidebar Styles */
         .sidebar {
             width: 250px;
-            background: linear-gradient( #3ad5e5, #b367ed);
+            background: linear-gradient(135deg, #3ad5e5, #b367ed);
             color: white;
             padding: 20px;
             display: flex;
@@ -124,7 +134,6 @@
         .dashboard-container {
             display: flex;
             width: 100%;
-            height: 100%;
         }
         
         .content {
@@ -137,7 +146,6 @@
             color: #0d47a1;
             font-size: 26px;
             margin-bottom: 20px;
-            margin-left: 400px;
         }
         
         #contentDisplay {
@@ -145,10 +153,6 @@
             padding: 20px;
             border-radius: 8px;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
-            height: 200px;
-            /*width: 1000px; */
-            background: url('header.jpg') no-repeat center center/cover;
-            margin-left: 100px;
         }
         .profile-container {
     display: flex;
@@ -331,9 +335,6 @@ input[type="text"], input[type="file"] {
                 top: 15px;
             }
         }
-        .info-boxes{
-            margin-left: 100px;
-        }
     </style>
 </head>
 <body>
@@ -347,7 +348,6 @@ input[type="text"], input[type="file"] {
         </ul>
     </nav>
 </header>
-
 <div id="editProfileModal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeEditProfile()">&times;</span>
@@ -377,44 +377,21 @@ input[type="text"], input[type="file"] {
             
             <h2>Dashboard</h2>
             <ul>
-                <li><a href="slip.php" id="milkTab">MilkDetails</a></li>
-                <li><a href="buffalo.php" id="milkTab">BuffaloDeatil</a></li>
-                <li><a href="cow.php" id="milkTab">CowDetails</a></li>
-                <li><a href="request.php" id="loanTab">Request Loan</a></li>
-                <li><a href="bookdoctor.php" id="doctorTab">Book Doctor</a></li>
-                <li><a href="progress.php" id="doctorTab">Progress</a></li>
+                <li><a href="user.php" id="milkTab">Users</a></li>
+                <li><a href="seerequest.php" id="loanTab">Loan Request</a></li>
+                <li><a href="seeapoinment.php" id="doctorTab">Appoinment</a></li>
                 <li  class="edit-btn" onclick="openEditProfile()">Edit Profile</li>
             </ul>
         </aside>
         
         <main class="content">
             <h1>Welcome, <?php echo $_SESSION['username']; ?>!</h1>
-            <div id="contentDisplay"></div>
-            <section class="info-boxes">
-        <div class="box">
-            <h2>How to increase fat?</h2>
-            <p> Fiber helps to improve the digestion and absorption of nutrients in cows, which can result in higher fat production in milk. Good quality roughage (such as hay or silage) is crucial.
-            Add energy-rich feeds like corn silage, oats, barley, or wheat can boost milk fat content. Carbohydrates such as sugars and starches play a key role in fat production.
-            </p>
-
-        </div>
-        <div class="box">
-            <h2>How to keep animals healthy?</h2>
-            <p> Feed your animals a balanced diet that meets their specific nutritional needs. This includes adequate amounts of carbohydrates, proteins, fats, vitamins, and minerals. Consult a nutritionist or veterinarian to develop a tailored feeding program.
-                Ensure that animals have access to fresh, clean water at all times. Dehydration can cause serious health problems.
-                Use high-quality feed, including roughage (hay, silage) and grains, that is free from mold, toxins, and contaminants.</p>
-        </div>
-        <div class="box">
-            <h2>How to increase milk production?</h2>
-            <p> Milk production is highly dependent on water intake. Ensure that animals have access to fresh, clean water at all times. Dehydration can lead to reduced milk yield and lower overall health.
-                Cows, for example, may drink up to 30-50 liters of water per day, especially when producing large quantities of milk. Make sure they are drinking enough water to support milk production.</p>
-        </div>
-    </section>
+            <div id="contentDisplay">
+                <p>Select an option from the left menu.</p>
+            </div>
         </main>
     </div>
-    
     <script>
-    
     function openEditProfile() {
         document.getElementById("editProfileModal").style.display = "flex";
     }
@@ -434,7 +411,6 @@ input[type="text"], input[type="file"] {
     document.getElementById("editProfileModal").style.display = "none";
     });
 </script>
-
 </body>
 </html>
 <?php
